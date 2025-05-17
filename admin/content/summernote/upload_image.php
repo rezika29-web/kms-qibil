@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (in_array(strtolower($fileType), $allowedTypes)) {
             if (move_uploaded_file($_FILES['image']['tmp_name'], $targetFilePath)) {
-                $backPath = "http://127.0.0.1/Project/kms-fitri/uploads/" . time() . "_" . $fileName;
+                $backPath = "http://127.0.0.1/Project/qibil/kms-qibil/uploads/" . time() . "_" . $fileName;
 
                 echo $backPath; // Mengembalikan URL gambar
             } else {

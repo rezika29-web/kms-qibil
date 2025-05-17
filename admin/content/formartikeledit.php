@@ -64,6 +64,10 @@ if (isset($_GET['id'])) {
                         <label for="kategori" class="form-label">Isi</label>
                         <textarea class="form-control" id="summernote" rows="3"></textarea>
                     </div>
+                    <div class="mb-3">
+                        <label for="link" class="form-label">Link Video</label>
+                        <input type="text" class="form-control" id="link" placeholder="link Video Artikel...">
+                    </div>
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="kategori">Kategori</label>
                         <select class="form-control" id="kategori">
@@ -191,12 +195,14 @@ if (isset($_GET['id'])) {
                 var summernote = $('#summernote').val();
                 var judul = $('#judul').val();
                 var kategori = $('#kategori').val();
+                var link = $('#link').val();
                 var idUser = <?= $_SESSION['user_id']; ?>;
                 let reqBody = {
                     "data": {
                         "judul": judul,
                         "isi": summernote,
                         "kategori": kategori,
+                        "link": link,
                         "users_permissions_user": idUser
                     }
                 }
@@ -212,7 +218,7 @@ if (isset($_GET['id'])) {
                         data: JSON.stringify(reqBody),
                         success: function(result) {
                             alert("Data berhasil diperbarui!");
-                            window.location.href = "http://127.0.0.1/Project/kms-fitri/admin/artikel.php";
+                            window.location.href = "http://127.0.0.1/Project/qibil/kms-qibil/admin/artikel.php";
                         },
                         error: function(xhr, status, error) {
                             alert("Gagal memperbarui data!");
@@ -226,7 +232,7 @@ if (isset($_GET['id'])) {
 
         });
     </script>
-
+<!-- <script>
         $(document).ready(function() {
             function getQueryParam(param) {
                 const urlParams = new URLSearchParams(window.location.search);
@@ -256,4 +262,4 @@ if (isset($_GET['id'])) {
                 }
             });
         });
-    </script> -->
+    </script>  -->

@@ -16,9 +16,11 @@
 <section class="blog-details section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8" id="contenArticle">
-       
-      </div>
+      <div class="col-lg-8">
+        <div id="contenArticle"></div><br />
+        <div id="totalKomentar"></div><br />
+        <div id="listKomentar"></div><br />
+      </div> 
       <div class="col-lg-4 mt-5 mt-lg-0">
         <!-- sidebar -->
         <aside class="sidebar pl-0 pl-lg-4">

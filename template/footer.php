@@ -26,7 +26,7 @@
       <div id="totalFullday" class="day"></div>
     </div>
     <h5>&copy; Copyright 2024. All rights reserved.</h5>
-    <h6>Design and Developed by <a href="http://127.0.0.1/Project/kms-fitri/">Kise Ryota</a></h6>
+    <h6>Design and Developed by <a href="http://127.0.0.1/Project/qibil/kms-qibil/">Kise Ryota</a></h6>
   </div>
 </footer> <!-- end footer -->
 

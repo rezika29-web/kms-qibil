@@ -212,7 +212,7 @@ if (isset($_GET['id'])) {
                         data: JSON.stringify(reqBody),
                         success: function(result) {
                             alert("Data berhasil diperbarui!");
-                            window.location.href = "http://127.0.0.1/Project/kms-fitri/admin/artikel.php";
+                            window.location.href = "http://127.0.0.1/Project/qibil/kms-qibil/admin/artikel.php";
                         },
                         error: function(xhr, status, error) {
                             alert("Gagal memperbarui data!");

@@ -91,7 +91,7 @@
                 $.post("http://localhost:1337/api/auth/local/register", reqBody, function(result){
                     $('#registerMessage').text("success register");
                     setTimeout(() => {
-                        window.location.href = "http://127.0.0.1/Project/kms-fitri/admin/";
+                        window.location.href = "http://127.0.0.1/Project/qibil/kms-qibil/admin/";
                     }, 2000);
                 }).fail(function (xhr, status, error) {
                     // Callback gagal

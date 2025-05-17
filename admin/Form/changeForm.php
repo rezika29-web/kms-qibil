@@ -172,7 +172,7 @@
 
                         // Redirect setelah beberapa detik
                         setTimeout(() => {
-                            window.location.href = "http://127.0.0.1/Project/kms-fitri/admin/logout.php";
+                            window.location.href = "http://127.0.0.1/Project/qibil/kms-qibil/admin/logout.php";
                         }, 2000);
                     },
                     error: function(xhr, status, error) {
