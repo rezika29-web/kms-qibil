@@ -13,14 +13,13 @@
 }
 </style>
 
-<section class="hero-area">
+<section class="hero-area block" >
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="block mt-4">
-					<h1 class="wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s">We are smart <br> Creative Agency</h1>
-					<p class="wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">Lorem ipsum dolor sit amet, consectetur
-						adipisicing elit. Nulla, ad rerum repellat. Sequi, labore, illo. Ducimus voluptates quidem obcaecati, ad.
+				<div class="block mt-5 pt-5"> 
+					<h1 style="font-size: 3rem; margin-top: 70px;" class="wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s">Knowledge Management System <br> Pada Petani Gambir</h1>
+					<p class="wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">Tanaman Gambir merupakan tanaman perdu yang memiliki nilai ekonomi tinggi didalam suatu komoditas. Di Sumatera Barat, khususnya di kecamatan Sutera Gambir ini menjadi salah satu mata pencarian yang telah lama dibudidayakan oleh masyarakat sekitar yang disebut dengan “Menggampo”.
 					</p>
 				</div>
 			</div>

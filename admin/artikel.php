@@ -23,22 +23,56 @@ include 'template/footer.php';
                 // Bersihkan daftar sebelumnya
                 $('#artikelList').empty();
 
-                // Looping data dan tambahkan ke elemen HTML
-                $.each(resData, function(index, item) {
-                    // Tambahkan data ke tabel
-                    $('#artikelList').append(
-                        `<tr>
-                        <td style="width: 50px; text-align: center;">${index + 1}</td>
-                        <td style="text-align: center;">${item.judul}</td>
-                        <td style="text-align: center;">${item.kategori.Kategori}</td>
-                        <td style="text-align: center;">${item.Like}</td>
-                        <td style="text-align: center;">
-                            <a href="artikeledit.php?id=${item.documentId}" class="btn btn-warning btn-sm">Edit</a>
-                            <button class="btn btn-danger btn-sm btn-delete" data-id="${item.documentId}">Hapus</button>
+              $.ajax({
+                    url: 'http://localhost:1337/api/lovers?populate=*',
+                    method: 'GET',
+                    dataType: 'json',
+                    success: async function (resDatas) {
+                        let lovesData = resDatas.data;
 
-                        </td>
-                    </tr>`
-                    );
+                         // Looping data dan tambahkan ke elemen HTML
+                          $.each(resData, function(index, item) {
+                            let totalLike = 0;
+                            for (let indexLove = 0; indexLove < lovesData.length; indexLove++) {
+                                if(lovesData[indexLove].koran.documentId == item.documentId){
+                                  totalLike++;
+                                }        
+                            }
+                              // Tambahkan data ke tabel
+                              $('#artikelList').append(
+                                  `<tr>
+                                  <td style="width: 50px; text-align: center;">${index + 1}</td>
+                                  <td style="text-align: center;">${item.judul}</td>
+                                  <td style="text-align: center;">${item.kategori.Kategori}</td>
+                                  <td style="text-align: center;">${totalLike}</td>
+                                  <td style="text-align: center;">
+                                      <a href="artikeledit.php?id=${item.documentId}" class="btn btn-warning btn-sm">Edit</a>
+                                      <button class="btn btn-danger btn-sm btn-delete" data-id="${item.documentId}">Hapus</button>
+
+                                  </td>
+                              </tr>`
+                              );
+                          });
+                    },
+                    error: function(error) {
+                       // Looping data dan tambahkan ke elemen HTML
+                        $.each(resData, function(index, item) {
+                            // Tambahkan data ke tabel
+                            $('#artikelList').append(
+                                `<tr>
+                                <td style="width: 50px; text-align: center;">${index + 1}</td>
+                                <td style="text-align: center;">${item.judul}</td>
+                                <td style="text-align: center;">${item.kategori.Kategori}</td>
+                                <td style="text-align: center;">${item.users_permissions_user.documentId}</td>
+                                <td style="text-align: center;">
+                                    <a href="artikeledit.php?id=${item.documentId}" class="btn btn-warning btn-sm">Edit</a>
+                                    <button class="btn btn-danger btn-sm btn-delete" data-id="${item.documentId}">Hapus</button>
+
+                                </td>
+                            </tr>`
+                            );
+                        });
+                    }
                 });
             },
             error: function(error) {

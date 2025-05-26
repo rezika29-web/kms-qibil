@@ -18,7 +18,7 @@ if($path == '/Project/qibil/kms-qibil/'){
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>Knowledge Management System Budidaya Tanaman Gambir</title>
+  <title>Budidaya Tanaman Gambir di Kecamatan Sutera</title>
 
     <!-- Menyertakan Marked.js dari CDN -->
     <script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/lib/marked.min.js"></script>
@@ -77,12 +77,12 @@ Fixed Navigation
 <header class="navigation fixed-top">
   <div class="container">
     <!-- main nav -->
-    <nav class="navbar navbar-expand-lg navbar-light px-0">
+    <nav class="navbar navbar-expand-lg  px-0">
       <!-- logo -->
       <a class="navbar-brand logo text-center" href="http://127.0.0.1/Project/qibil/kms-qibil/">
         <!-- <img loading="lazy" class="logo-default" src="images/logo.png" alt="logo" />
         <img loading="lazy" class="logo-white" src="images/logo-white.png" alt="logo" /> -->
-        <h2 style="color: white; font-weight: bold;">Knowledge Management System <br> Budidaya Tanaman Gambir</h2>
+        <h2 style="color: white; font-weight: bold;">Budidaya Tanaman Gambir di <br>Kecamatan Sutera</h2>
       </a>
       <!-- /logo -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"

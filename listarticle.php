@@ -51,7 +51,7 @@ include 'template/header.php';
 
 <!-- Loader -->
 <div id="loader">
-    ]<div class="slide-load">
+    <div class="slide-load">
         <div>
             <img src="test.gif" width="200" height="200"></img>
         </div>
