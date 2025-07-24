@@ -36,13 +36,13 @@
             </form>
           </div>
           <div class="widget-categories widget">
-            <h2>Article Categories</h2>
+            <h2>Kategori Artikel</h2>
             <!-- widget categories list -->
             <ul class="widget-categories-list" id="kategoriListSide">
             </ul>
           </div>
           <div class="widget-post widget">
-            <h2>Latest Post</h2>
+            <h2>Postingan Terbaru</h2>
             <!-- latest post -->
              <div class="sideContent" id="targetElementSideContent">
                <ul class="widget-post-list" id="articleList">

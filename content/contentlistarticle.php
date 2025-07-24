@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Articles</h2>
+				<h2>Artikel</h2>
 				<ol class="breadcrumb header-bradcrumb justify-content-center" id="judulKategori">
 					
 				</ol>

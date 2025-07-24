@@ -36,7 +36,7 @@ Start Blog Section
 			<!-- section title -->
 			<div class="col-xl-6 col-lg-8">
 				<div class="title text-center ">
-					<h2> Articles</h2>
+					<h2> Artikel</h2>
 					<div class="border"></div>
 					<p>Berikut beberapa article terbaru.</p>
 				</div>

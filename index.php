@@ -10,7 +10,7 @@ include 'template/header.php';
         left: 0;
         width: 100%;
         height: 100%;
-        background-color:rgb(177, 176, 187);
+        background-color: rgb(177, 176, 187);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -37,6 +37,22 @@ include 'template/header.php';
         transform: translateY(-100%);
         opacity: 0;
     }
+
+    article {
+        border: 2px solid #ccc;
+        /* warna abu tipis */
+        border-radius: 4px;
+        /* opsional: lengkungan sudut */
+        padding: 16px;
+        /* ruang dalam */
+        margin-bottom: 20px;
+        margin-left: 20px;
+        /* jarak antar artikel */
+        background-color: #fff;
+        /* latar belakang putih */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        /* opsional: bayangan lembut */
+    }
 </style>
 
 <!-- Loader -->
@@ -45,7 +61,7 @@ include 'template/header.php';
         <div>
             <img src="test.gif" width="200" height="200"></img>
         </div>
-    <!-- <div class="box"></div> -->
+        <!-- <div class="box"></div> -->
     </div>
 
 </div>
@@ -73,7 +89,7 @@ include 'template/footer.php';
     });
 </script>
 
-<script>      
+<script>
     function formatTanggal(dateString) {
         // Ubah string ISO menjadi objek Date
         const date = new Date(dateString);
@@ -91,8 +107,8 @@ include 'template/footer.php';
 
         // Format ke Desember 31, 2024
         return `${bulanNama} ${hari}, ${tahun}`;
-    }     
-    
+    }
+
     $(document).ready(function() {
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
@@ -110,19 +126,19 @@ include 'template/footer.php';
                 $('#articleList').empty();
                 // Looping data dan tambahkan ke elemen HTML
                 $.each(resData, function(index, dt) {
-                    if(index < 6){
+                    if (index < 6) {
                         var maxLength = 150;
                         var originalText = "";
                         // Potong string jika lebih panjang dari maxLength
                         if (dt.isi.length > maxLength) {
                             originalText = dt.isi.substring(0, maxLength) + '...'; // Menambahkan ellipsis "..." di akhir
-                        }else{
+                        } else {
                             originalText = dt.isi
                         }
 
                         $.post('markdown.php', {
                             isi: originalText
-                        }, function (response) {
+                        }, function(response) {
                             var data = JSON.parse(response);
                             const isoDate = dt.createdAt;
                             const formattedDate = formatTanggal(isoDate);
@@ -130,10 +146,9 @@ include 'template/footer.php';
                                 `<article class="col-lg-4 col-md-6">
                                     <div class="post-item">
                                         <div class="content">
-                                            <h3><a href="article.php?id=`+ dt.documentId + `">`+ dt.judul + `</a></h3>
-                                            <p style="font-size: 13px;">`+dt.users_permissions_user.username+` / `+formattedDate+`</p>
-                                            <p>`+ data.message + `</p>
-                                            <a class="btn btn-main" href="article.php?id=`+ dt.documentId + `">Read more</a>
+                                            <h3><a href="article.php?id=` + dt.documentId + `">` + dt.judul + `</a></h3>
+                                            <p style="font-size: 13px;">` + dt.users_permissions_user.username + ` / ` + formattedDate + `</p>
+                                            <p>` + data.message + `</p>
                                         </div>
                                     </div>
                                 </article>`

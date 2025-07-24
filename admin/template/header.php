@@ -50,20 +50,19 @@ if (!isset($_SESSION['user_id'])) {
 <body id="page-top">
 
     <!-- Page Wrapper -->
-    <div id="wrapper">
+    <div id="wrapper" class="shadow">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="http://127.0.0.1/Project/qibil/kms-qibil/admin">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Dashboard KMS</div>
-            </a>
-
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #000080;">
+            
             <!-- Divider -->
+            
+                        <!-- Sidebar - Brand -->
+                        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="http://127.0.0.1/Project/qibil/kms-qibil/admin">
+                            <div class="sidebar-brand-icon rotate-n-15">
+                            </div>
+                            <div class="sidebar-brand-text mx-3">Dashboard</div>
+                        </a>
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->

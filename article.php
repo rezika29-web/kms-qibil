@@ -529,7 +529,7 @@ include 'template/footer.php';
                                     </article>`
                                 );
                                 $('#judulArticle').append(resData.judul);
-                                $('#breadcrumbArticle').append(`<li class="breadcrumb-item"><a href="index.html" class="text-white">Article</a></li>
+                                $('#breadcrumbArticle').append(`<li class="breadcrumb-item"><a href="index.html" class="text-white">Artikel</a></li>
                                 <li class="breadcrumb-item active" aria-current="page" >`+ resData.judul +`</li>`); 
 
                                 $.ajax({
@@ -620,7 +620,7 @@ include 'template/footer.php';
                                     </article>`
                                 );
                                 $('#judulArticle').append(resData.judul);
-                                $('#breadcrumbArticle').append(`<li class="breadcrumb-item"><a href="index.html" class="text-white">Article</a></li>
+                                $('#breadcrumbArticle').append(`<li class="breadcrumb-item"><a href="index.html" class="text-white">Artikel</a></li>
                                 <li class="breadcrumb-item active" aria-current="page" >`+ resData.judul +`</li>`); 
                             }
                         });
